@@ -1,0 +1,20 @@
+{
+  "name": "urlshotener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "stop": "taskkill -f -im node.exe"
+  },
+  "keywords": [],
+  "author": "vladimir",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
