@@ -2,8 +2,11 @@ const express = require('express');
 const app = express();
 const PORT = 3000 || process.env.PORT;
 
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 app.get('/', (req, res) => {
-    return res.send('Hello world!!!');
+    return res.render('index');
 });
 
 app.listen(PORT, () => {
