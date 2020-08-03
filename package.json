@@ -17,6 +17,10 @@
     "mongoose": "^5.9.24",
     "shortid": "^2.2.15"
   },
+  "engines": {
+    "node": "13.x"
+  },
+
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
