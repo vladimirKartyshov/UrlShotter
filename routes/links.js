@@ -3,6 +3,12 @@ const router = express.Router();
 const Link = require('../models/link');
 const shortid = require('shortid');
 
+let APP_LINK = 'localhost:3000';
+
+if (process.env.NODE_ENV === 'production') {
+    APP_LINK = process.env.APP_LINK;
+}
+
 router.post('/short', async (req, res) => {
     const {link} = req.body;
 
@@ -14,7 +20,7 @@ router.post('/short', async (req, res) => {
         }
 
         const code = shortid.generate();
-        const shortUrl = `localhost:3000/links/${code}`;
+        const shortUrl = `${APP_LINK}/links/${code}`;
         url = new Link({
             code,
             source: link,
